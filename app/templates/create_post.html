@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="content-section bg-secondary">
+<div class="content-section " style="border: 4px solid rgb(68, 62, 62); background-color:rgb(242, 243, 247)">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4 text-light">{{ legend }}</legend>
+            <legend class="border-bottom mb-4 text-dark">{{ legend }}</legend>
             <div class="form-group">
-                {{ form.title.label(class="form-control-label text-light") }}
+                {{ form.title.label(class="form-control-label text-dark") }}
                 {% if form.title.errors %}
                     {{ form.title(class="form-control form-control-lg is-invalid") }}
                     <div class="invalid-feedback">
@@ -18,7 +18,7 @@
                     {{ form.title(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
-            <div class="form-group text-light">
+            <div class="form-group text-dark">
                 {{ form.content.label(class="form-control-label") }}
                 {% if form.content.errors %}
                     {{ form.content(class="form-control form-control-lg is-invalid") }}
@@ -33,7 +33,7 @@
             </div>
         </fieldset>
         <div class="form-group">
-            {{ form.submit(class="btn btn-outline-light") }}
+            {{ form.submit(class="btn btn-outline-dark") }}
         </div>
     </form>
 </div>
